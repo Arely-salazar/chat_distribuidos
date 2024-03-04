@@ -80,8 +80,8 @@ io.on("connection", (socket) => {
 });
 
 //escuchar puerto
-server.listen(3000,"192.168.0.165",()=>{
-    console.log("Servidor funcionando en http://192.168.0.165:3000");
+server.listen(3000,"10.182.0.103",()=>{
+    console.log("Servidor funcionando en http://10.182.0.103:3000");
 });
 
 //manejar errores app.use((err, req, res, next) => {
