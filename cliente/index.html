@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Chat</title>  
+        
+        <!--inicio-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css" integrity="sha512-0Nyh7Nf4sn+T48aTb6VFkhJe0FzzcOlqqZMahy/rhZ8Ii5Q9ZXG/1CbunUuEbfgxqsQfWXjnErKZosDSHVKQhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+
+    <body>
+        <!-- contenedor principal -->
+        <div class="contenedor">
+
+            <!-- contenedor para ver cuales son los mensajes sin contestar -->
+            <div class="chat-pendientes" id="chatPendientes"></div>
+
+            <!-- contenedor para mostrar la conversación -->
+            <div class="chat" id="chat">
+
+                <!-- mostrar la conversación como una lista no ordenada -->
+                <ul id="chat-list"></ul>
+            </div>
+        </div>
+
+        <!-- contendor para escribir mensaje -->
+        <div class="escribir-chat">
+
+            <!--input para escribir el mensaje-->
+            <input type="text" id="mensaje" placeholder="Escribe un mensaje" enviarMensaje()>
+            
+            <!--label para imagen-->
+            <label for="fileInput" class="boton-imagen">&#10133;</label>
+
+            <!--input para escribir el mensaje de imagen-->
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+            <!--boton para enviar mensaje-->
+            <button id="enviar" onclick="enviarMensaje()">&#10132;</button>  
+        
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--emojis-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.js"></script>
+
+        <script src ="http://192.168.0.165:3000/socket.io/socket.io.js"></script>
+
+        <script src="http://192.168.0.165:3000/cliente.js" type="text/javascript"></script>
+
+       
+
+
+    </body>
+</html>
